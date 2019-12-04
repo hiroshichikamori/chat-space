@@ -1,16 +1,21 @@
 .side_bar
   .side_bar__header
     .side_bar__header__username
-      chikamori
+      = current_user.name
     .side_bar__header__link
-      = link_to "#", class: "side_bar__header__link__pencil" do
+      -# = link_to new_group_path do
+      -#   = fa_icon 'pencil-square-o', class: 'side_bar__header__link__pencil'
+      = link_to new_group_path, class: "side_bar__header__link__pencil" do
         %i.fa.fa-edit
-      = link_to "#", class: "side_bar__header__link__cog" do
-        %i.fa.fa-cog
+      = link_to edit_user_path(current_user) do
+        = icon('fas', 'cog', class: 'side_bar__header__link__cog')
 
   .side_bar__contents
-    .side_bar__contents__groupname
-      グループ名
-    .side_bar__contents__message
-      まだメッセージはありません
+    - current_user.groups.each do |group|
+      .side_bar__content
+        = link_to '#' do
+          .side_bar__contents__groupname
+            = group.name
+          .side_bar__contents__message
+            まだメッセージはありません
       
