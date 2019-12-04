@@ -1,0 +1,28 @@
+.chat_main
+	.chat_main__header
+		.chat_main__header__boxleft
+			.chat_main__header__boxleft__group
+				グループ名
+			.chat_main__header__boxleft__member
+				メンバー
+		.chat_main__header__boxright__btn
+			= link_to "#", class: "chat_main__header__boxright__btn-link" do
+				Edit
+	.chat_main__contents
+		.chat_main__contents__box
+			.chat_main__contents__box__membername
+				hiroshi
+			.chat_main__contents__box__memberdate
+				2019/11/25
+		.chat_main__contents__membermessage
+			hello!
+	.chat_main__form
+		.chat_main__form__message
+			.chat_main__form__message__text
+				type a message
+			.chat_main__form__message__image
+				%label{class: "input-box__image"}
+					= icon('fas', 'image')
+					%input{class: "type-file",type: "file"}
+		.chat_main__form__btn
+			send
