@@ -8,56 +8,48 @@
 .side_bar {
 	width: 300px;
 	height: 100%;
-
 	&__header {
 		width: 300px;
 		height: 100px;
-		background-color: #253141;
+		background-color: $navy;
 		display: flex;
 		justify-content: space-between;
 		line-height: 100px;
-
 		&__username {
-			color:white;
+			color: $white;
 			line-height: 100px;
 			padding-left: 20px;
 			font-size: 16px;
 		}
-		
 		&__link {
-			color:white;
+			color: $white;
 			padding-right: 20px;
 			
 			&__pencil {
-				color: white;
+				color: $white;
 				text-decoration: none;
 			}
 			&__cog {
-				color: white;
+				color: $white;
 				text-decoration: none;
 			}
 		}
 	}
-
 	&__contents {
-		background-color:#2f3e51;
+		background-color: $gray-blue;
 		width: 300px;
 		height: calc(100vh - 100px);
 
 		&__groupname {
-			color: white;
+			color: $white;
 			font-size: 15px;
 			padding-top: 20px;
 			margin-left: 20px;
 		}
 		&__message {
-			color: white;
+			color: $white;
 			font-size: 11px;
 			margin-left: 20px;
 		}
 	}
 }
-
-
-
-
