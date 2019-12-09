@@ -1,5 +1,5 @@
 .wrapper {
-	width: 100%;
+	width: {min-width: 500px;}
 	height: 100%;
 	display: flex;
 	justify-content: space-between;
