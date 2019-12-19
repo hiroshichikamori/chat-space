@@ -12,14 +12,8 @@
 		.chat_main__header__boxright__btn
 			= link_to edit_group_path(@group.id), class: "chat_main__header__boxright__btn-link" do
 				Edit
-	.chat_main__contents
-		.chat_main__contents__box
-			.chat_main__contents__box__membername
-				hiroshi
-			.chat_main__contents__box__memberdate
-				2019/11/25
-		.chat_main__contents__membermessage
-			= render @messages
+	.chat_main_contents
+		= render @messages
 
 	
 	.chat_main__form

@@ -13,3 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+// 並列ファイルの読み込み（ここではmassage.js）

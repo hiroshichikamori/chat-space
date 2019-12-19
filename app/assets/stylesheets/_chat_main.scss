@@ -1,6 +1,6 @@
 .chat_main {
 	width: calc(100vw - 300px);
-	height: 900px;
+	// height: 900px;
 	&__header {
 		width: calc(100vw - 300px);
 		height: 100px;
@@ -44,33 +44,38 @@
 		}
 	}
 
-	&__contents {
+	&_contents {
 		width: calc(100vw - 300px);
 		height: calc(100vh - 190px);
 		background-color: $off-white;
-		position: relative;
-		&__box {
-			display: flex;
-			position: absolute;
-			top: 46px;
-			left: 40px;
-			&__membername {
-				font-size: 16px;
-				font-style: bold;
+		padding-left: 40px;
+		overflow: scroll;
+		// position: relative;
+		&-message{
+			margin: 10px 0px;
+			&-detail {
+				display: flex;
+				// position: absolute;
+				top: 46px;
+				left: 40px;
+				&-user-name {
+					font-size: 16px;
+					font-style: bold;
+					color: $middle-gray;
+				}
+				&-date {
+					font-size: 12px;
+					color: $gray;
+					margin-left: 10px;
+				}
+			}
+			&-body {
+				font-size: 14px;
 				color: $middle-gray;
+				// position: absolute;
+				top: 72px;
+				left: 40px;
 			}
-			&__memberdate {
-				font-size: 12px;
-				color: $gray;
-				margin-left: 10px;
-			}
-		}
-		&__membermessage {
-			font-size: 14px;
-			color: $middle-gray;
-			position: absolute;
-			top: 72px;
-			left: 40px;
 		}
 	}
 	
