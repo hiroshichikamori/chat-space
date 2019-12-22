@@ -39,7 +39,9 @@
 		background-color: $gray-blue;
 		width: 300px;
 		height: calc(100vh - 100px);
-		text-decoration: none;
+			a{
+				text-decoration: none;
+			}
 
 		&__groupname {
 			color: $white;
