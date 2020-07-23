@@ -8,7 +8,7 @@
 - has_many :users
 - has_many :groups_users
 
-
+アイウエオ
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -23,8 +23,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
-|image|string||
+|body|text| |
+|image|string| |
 |user|reference|null: false, foreign_key: true|
 |group|reference|null: false, foreign_key: true|
 

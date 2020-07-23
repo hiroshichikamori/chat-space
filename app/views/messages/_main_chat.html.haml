@@ -1,12 +1,11 @@
 .chat_main
-	
 	.chat_main__header
 		.chat_main__header__boxleft
 			.chat_main__header__boxleft__group
 				= @group.name
-			%ul.chat_main__header__boxleft__member
+			.chat_main__header__boxleft__member
 				member:
-				%li.member
+				.chat_main__header__boxleft__member__member
 					- @group.group_users.each do |group_user|
 						= group_user.user.name
 		.chat_main__header__boxright__btn
@@ -14,6 +13,7 @@
 				Edit
 	.chat_main_contents
 		= render @messages
+		
 
 	
 	.chat_main__form

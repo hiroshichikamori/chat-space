@@ -38,14 +38,13 @@ $(function() {
       dataType: "json"
     })
       .done(function(users) {
-        $("#user-search-result").empty();
-
-        if (users.length !== 0) {
+        $("#user-search-result").empty(); //子要素を空にする？
+        if (users.length !== 0) { //検索したユーザーが一人でもいるならtrue
           users.forEach(function(user) {
             addUser(user);
           });
-        } else if (input.length == 0) {
-          return false;
+        // } else if (input.length == 0) {
+        //   return false;
         } else {
           addNoUser();
         }
@@ -54,17 +53,17 @@ $(function() {
         alert("通信エラーです。ユーザーが表示できません。");
       });
   });
-  $(document).on("click", ".chat-group-user__btn--add", function() {
-    console.log
-    const userName = $(this).attr("data-user-name");
-    const userId = $(this).attr("data-user-id");
+  
+  $(document).on("click", ".chat-group-user__btn--add", function() { //document .onで常に新しいhtmlを取得 追加ボタン
+    const userName = $(this).data("user-name"); //thisはクラス(chat-group〜)のこと。attrで追加する属性がどこのものか指定
+    const userId = $(this).data("user-id");
     $(this)
-      .parent()
-      .remove();
-    addDeleteUser(userName, userId);
-    addMember(userId);
+      .parent() //追加ボタンの親要素指定
+      .remove(); //追加したあとは検索欄からremoveメソッドを使って削除（追加候補欄削除）
+    addDeleteUser(userName, userId); //追加したユーザーの削除のこと
+    addMember(userId); 
   });
-  $(document).on("click", ".chat-group-user__btn--remove", function() {
+  $(document).on("click", ".chat-group-user__btn--remove", function() { //追加したメンバーの削除
     $(this)
       .parent()
       .remove();

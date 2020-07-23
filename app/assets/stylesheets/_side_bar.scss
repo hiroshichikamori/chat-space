@@ -39,10 +39,6 @@
 		background-color: $gray-blue;
 		width: 300px;
 		height: calc(100vh - 100px);
-			a{
-				text-decoration: none;
-			}
-
 		&__groupname {
 			color: $white;
 			font-size: 15px;
@@ -54,5 +50,8 @@
 			font-size: 11px;
 			margin-left: 20px;
 		}
+	}
+	a{
+		text-decoration: none;
 	}
 }
